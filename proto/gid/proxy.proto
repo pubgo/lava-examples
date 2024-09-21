@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package example.gid;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/pubgo/lava-examples/pkg/gen/gidpb;gidpb";
+
+service IdProxy {
+    rpc Echo (EchoReq) returns (EchoRsp) {
+        option (google.api.http) = {
+            post: "/id/echo"
+            body: "*"
+        };
+    }
+}
+
+message EchoReq {
+    string hello = 1;
+}
+
+message EchoRsp {
+    string hello = 1;
+}

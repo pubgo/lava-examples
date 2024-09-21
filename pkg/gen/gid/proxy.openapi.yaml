@@ -1,0 +1,40 @@
+# Generated with protoc-gen-openapi
+# https://github.com/pubgo/protoc-gen-openapi
+
+openapi: 3.0.3
+info:
+    title: openapi
+    version: 0.0.1
+paths:
+    /id/echo:
+        post:
+            tags:
+                - IdProxy
+            operationId: IdProxy_Echo
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/EchoReq'
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/EchoRsp'
+components:
+    schemas:
+        EchoReq:
+            type: object
+            properties:
+                hello:
+                    type: string
+        EchoRsp:
+            type: object
+            properties:
+                hello:
+                    type: string
+tags:
+    - name: IdProxy

@@ -1,0 +1,59 @@
+checksum: 22d5cd71dc5b09a2df62dabe13922429487a6280
+vendor: .proto
+base:
+  out: ./pkg/gen
+  paths: import
+  module: github.com/pubgo/lava-examples/pkg/gen
+root:
+  - proto
+includes:
+  - proto
+deps:
+  - name: google
+    url: github.com/googleapis/googleapis
+    path: /google
+    version: v0.0.0-20220224004616-3c171936039b
+  - name: google/protobuf
+    url: /usr/local/include/google/protobuf
+  - name: openapiv3
+    url: github.com/pubgo/protoc-gen-openapi
+    path: /proto/openapiv3
+    version: v0.7.4
+  - name: validate
+    url: github.com/envoyproxy/protoc-gen-validate
+    path: /validate
+    version: v0.1.0
+  - name: retag
+    url: github.com/pubgo/protobuild
+    path: /proto/retag
+    version: v0.0.21
+  - name: errorpb
+    url: github.com/pubgo/funk
+    path: /proto/errorpb
+    version: v0.5.52-0.20240921042009-859084aa39fc
+  - name: cloudjobs
+    url: github.com/pubgo/funk
+    path: /proto/cloudjobs
+    version: v0.5.52-0.20240921042009-859084aa39fc
+  - name: lava
+    url: github.com/pubgo/lava
+    path: /proto/lava
+    version: v0.2.21-0.20240921102051-ea8078dcdaeb
+plugins:
+  - name: go
+  - name: lava
+  - name: cloudjobs
+  - name: go-grpc
+    opt:
+      - require_unimplemented_servers=false
+  - name: go-errors
+  - name: openapi
+    exclude_opts:
+      - module=
+    opts:
+      - title="openapi"
+      - paths=import
+      - enum_type=string
+      - default_response=false
+      - depth=10
+      - output_mode=source_relative
