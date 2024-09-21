@@ -298,8 +298,8 @@ github.com/prometheus/procfs v0.12.0 h1:jluTpSng7V9hY0O2R9DzzJHYb2xULk9VTR1V1R/k
 github.com/prometheus/procfs v0.12.0/go.mod h1:pcuDEFsWDnvcgNzo4EEweacyhjeA9Zk3cnaOZAZEfOo=
 github.com/pubgo/dix v0.3.18 h1:s7qkJUEuajBF3GhqucE6lv4pDXvfgfZ8CQaFUHnjXWY=
 github.com/pubgo/dix v0.3.18/go.mod h1:J0PyuMm7mW6ZrN13l9xz0rtKbzliREFyvb7fuaGYyVw=
-github.com/pubgo/funk v0.5.52-0.20240921042009-859084aa39fc h1:wvfbkpH0u7HiTOIvxV2PW20Kixg5DCvREMreaE6j3iY=
-github.com/pubgo/funk v0.5.52-0.20240921042009-859084aa39fc/go.mod h1:kNSD071m7wU4ZXqsE15hqRobC0Pig7HI9Yil+3BESMc=
+github.com/pubgo/funk v0.5.53-0.20240921141407-e074b293cf31 h1:weWLso++p75jgpZMT8mFEGsQjKPdnL92Ih5XdU9rKJA=
+github.com/pubgo/funk v0.5.53-0.20240921141407-e074b293cf31/go.mod h1:7Ttc5pIJBe4c0cOzo0+x9m+HK+aRNH3ZohJj5hbuT2A=
 github.com/pubgo/lava v0.2.21-0.20240921102051-ea8078dcdaeb h1:Qkq3On9lPDxgWqTqaZ6f2jB3TGK90psNU29Fhhps/eE=
 github.com/pubgo/lava v0.2.21-0.20240921102051-ea8078dcdaeb/go.mod h1:nXHr5AXf0XNbH+MpiLZYvb9w0xSvK3+mKw2Gpk8p3Ps=
 github.com/pubgo/opendoc v0.0.5 h1:aM6xkBQ0XMSq8OWytl5JhTMBUv8L+aYQFXd2z9eNkZE=

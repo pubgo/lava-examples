@@ -3,13 +3,14 @@ module github.com/pubgo/lava-examples
 go 1.23
 
 require (
+	github.com/gofiber/fiber/v2 v2.52.4
 	github.com/google/gnostic-models v0.6.8
 	github.com/google/uuid v1.6.0
 	github.com/joho/godotenv v1.5.1
 	github.com/libp2p/go-yamux/v4 v4.0.1
 	github.com/mattheath/kala v0.0.0-20171219141654-d6276794bf0e
 	github.com/pubgo/dix v0.3.18
-	github.com/pubgo/funk v0.5.52-0.20240921042009-859084aa39fc
+	github.com/pubgo/funk v0.5.53-0.20240921141407-e074b293cf31
 	github.com/pubgo/lava v0.2.21-0.20240921102051-ea8078dcdaeb
 	github.com/teris-io/shortid v0.0.0-20220617161101-71ec9f2aa569
 	github.com/urfave/cli/v3 v3.0.0-alpha9
@@ -45,7 +46,6 @@ require (
 	github.com/go-openapi/swag v0.22.8 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/gofiber/adaptor/v2 v2.2.1 // indirect
-	github.com/gofiber/fiber/v2 v2.52.4 // indirect
 	github.com/gofiber/utils v1.1.0 // indirect
 	github.com/golang/mock v1.6.0 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
