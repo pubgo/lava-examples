@@ -33,8 +33,9 @@ var typesReq = &resty.RequestConfig{
 }
 
 var (
-	_ lava.GrpcRouter = (*Id)(nil)
-	_ gidpb.IdServer  = (*Id)(nil)
+	_ lava.GrpcRouter    = (*Id)(nil)
+	_ gidpb.IdServer     = (*Id)(nil)
+	_ cloudjobs.Register = (*Id)(nil)
 )
 
 type Id struct {
@@ -46,6 +47,12 @@ type Id struct {
 	service   *gid_client.Service
 	mux       *gateway.Mux
 	jobCli    *cloudjobs.Client
+}
+
+func (id *Id) RegisterCloudJobs(jobCli *cloudjobs.Client) {
+	gidpb.RegisterIdServiceEventChangedCloudJob(jobCli, func(ctx *cloudjobs.Context, req *gidpb.DoProxyEventReq) error {
+		return nil
+	})
 }
 
 func (id *Id) EventChanged(ctx context.Context, req *gidpb.DoProxyEventReq) (*emptypb.Empty, error) {

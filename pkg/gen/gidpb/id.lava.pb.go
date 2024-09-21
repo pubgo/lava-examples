@@ -14,9 +14,9 @@ import (
 
 // IdServiceGenerateAction Id/Generate
 // Generate 生成ID
-var IdServiceGenerateAction = func() lavapbv1.RpcMeta {
+var IdServiceGenerateAction = func() *lavapbv1.RpcMeta {
 	var p lavapbv1.RpcMeta
-	var data = `{"name":"id.gen", "tags":{"hello":"world", "internal":"true"}}`
+	var data = `{"name":"id.gen","tags":{"hello":"world","internal":"true"}}`
 	assert.Exit(protojson.Unmarshal([]byte(data), &p))
-	return p
+	return &p
 }()
