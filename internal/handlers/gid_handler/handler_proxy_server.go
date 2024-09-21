@@ -4,6 +4,8 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/pubgo/lava-examples/pkg/gen/gidpb"
+	"github.com/pubgo/lava/core/lavacontexts"
 	"github.com/pubgo/lava/lava"
 	"google.golang.org/grpc"
 )

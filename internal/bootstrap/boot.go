@@ -3,6 +3,9 @@ package bootstrap
 import (
 	"github.com/pubgo/funk/config"
 	"github.com/pubgo/funk/recovery"
+	"github.com/pubgo/lava-examples/cmds/taskcmd"
+	"github.com/pubgo/lava-examples/internal/handlers/gid_handler"
+	"github.com/pubgo/lava-examples/internal/services/gid_client"
 	"github.com/pubgo/lava/cmds/app"
 	"github.com/pubgo/lava/pkg/gateway"
 )

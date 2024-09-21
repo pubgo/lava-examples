@@ -1,0 +1,18 @@
+logger:
+  level: debug
+  as_json: false
+
+metric:
+  driver: "prometheus"
+  interval: 5s
+
+grpc_server:
+  base_url: gid
+  enable_print_routes: true
+  enable_cors: true
+  ws_read_limit: 10
+#  http_port: 8081
+#  grpc_port: 50052
+
+#task:
+#  http_port: 8081

@@ -5,10 +5,12 @@ import (
 	"fmt"
 	"math/rand"
 
+	"github.com/gofiber/fiber/v2"
 	"github.com/mattheath/kala/bigflake"
 	"github.com/mattheath/kala/snowflake"
 	"github.com/pubgo/funk/assert"
 	"github.com/pubgo/funk/log"
+	"github.com/pubgo/lava-examples/internal/services/gid_client"
 	"github.com/pubgo/lava/core/metrics"
 	"github.com/pubgo/lava/core/scheduler"
 	"github.com/pubgo/lava/lava"

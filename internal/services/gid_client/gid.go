@@ -1,6 +1,7 @@
 package gid_client
 
 import (
+	"github.com/pubgo/lava-examples/pkg/gen/gidpb"
 	"github.com/pubgo/lava/clients/grpcc"
 	"github.com/pubgo/lava/clients/resty"
 )

@@ -29,4 +29,3 @@ vet:
 protobuf:
 	protobuild vendor
 	protobuild gen
-

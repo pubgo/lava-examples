@@ -1,6 +1,7 @@
 package bootstrap
 
 import (
+	"github.com/pubgo/lava-examples/internal/services/gid_client"
 	"github.com/pubgo/lava/core/logging"
 	"github.com/pubgo/lava/core/metrics"
 	"github.com/pubgo/lava/servers/grpcs"
