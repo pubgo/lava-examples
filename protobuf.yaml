@@ -52,7 +52,6 @@ plugins:
       - module=
     opts:
       - title="openapi"
-      - paths=import
       - enum_type=string
       - default_response=false
       - depth=10
