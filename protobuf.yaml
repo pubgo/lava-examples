@@ -56,4 +56,3 @@ plugins:
       - enum_type=string
       - default_response=false
       - depth=10
-      - output_mode=source_relative
