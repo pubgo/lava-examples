@@ -48,6 +48,7 @@ plugins:
       - require_unimplemented_servers=false
   - name: go-errors
   - name: openapi
+    out: ./docs
     exclude_opts:
       - module=
     opts:
