@@ -2,6 +2,10 @@ module github.com/pubgo/lava-examples
 
 go 1.23
 
+replace (
+	github.com/pubgo/lava => ../lava
+)
+
 require (
 	github.com/gofiber/fiber/v2 v2.52.4
 	github.com/google/gnostic-models v0.6.8

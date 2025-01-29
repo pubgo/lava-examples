@@ -1,9 +1,9 @@
-checksum: 22d5cd71dc5b09a2df62dabe13922429487a6280
-vendor: .proto
+checksum: b67296e9c2c4961bcfbcdeef4f493d21f663eb01
+vendor: proto-vendor
 base:
   out: ./pkg/gen
   paths: import
-  module: github.com/pubgo/lava-examples/pkg/gen
+  module: github.com/pubgo/catdogs/pkg/gen
 root:
   - proto
 includes:
@@ -15,40 +15,37 @@ deps:
     version: v0.0.0-20220224004616-3c171936039b
   - name: google/protobuf
     url: /usr/local/include/google/protobuf
-  - name: openapiv3
-    url: github.com/pubgo/protoc-gen-openapi
-    path: /proto/openapiv3
-    version: v0.7.4
+    optional: true
   - name: validate
     url: github.com/envoyproxy/protoc-gen-validate
     path: /validate
-    version: v0.1.0
+    version: v1.1.0
+  - name: openapiv3
+    url: github.com/pubgo/protoc-gen-openapi
+    path: /proto/openapiv3
+    version: v0.7.7
   - name: retag
     url: github.com/pubgo/protobuild
     path: /proto/retag
-    version: v0.0.21
+    version: v0.0.24
   - name: errorpb
     url: github.com/pubgo/funk
     path: /proto/errorpb
-    version: v0.5.52-0.20240921042009-859084aa39fc
-  - name: cloudjobs
-    url: github.com/pubgo/funk
-    path: /proto/cloudjobs
-    version: v0.5.52-0.20240921042009-859084aa39fc
+    version: v0.5.64-conn.4
   - name: lava
     url: github.com/pubgo/lava
     path: /proto/lava
-    version: v0.2.21-0.20240921102051-ea8078dcdaeb
+    version: v0.2.27
 plugins:
   - name: go
-  - name: lava
-  - name: cloudjobs
   - name: go-grpc
-    opt:
-      - require_unimplemented_servers=false
   - name: go-errors
+  - name: go-cloudevent
+  - name: go-enum
+  - name: retag
+  - name: validate-go
   - name: openapi
-    out: ./docs
+    out: ./pkg/gen/openapi
     exclude_opts:
       - module=
     opts:
@@ -56,3 +53,26 @@ plugins:
       - enum_type=string
       - default_response=false
       - depth=10
+      - output_mode=source_relative
+  - name: doc
+    skip_base: true
+    exclude_opts:
+      - module=
+    out: ./pkg/gen/docs
+    opts:
+      - html,index.html
+installers:
+  - github.com/pubgo/protobuild@latest
+  - google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+  - github.com/envoyproxy/protoc-gen-validate/cmd/protoc-gen-validate-go@latest
+  - github.com/pubgo/funk/cmds/protoc-gen-go-errors@latest
+  - github.com/pubgo/funk/cmds/protoc-gen-go-enum@latest
+  - storj.io/drpc/cmd/protoc-gen-go-drpc@latest
+  - github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@latest
+  - connectrpc.com/connect/cmd/protoc-gen-connect-go@latest
+  - github.com/twitchtv/twirp/protoc-gen-twirp@latest
+  - github.com/pubgo/lava/cmds/protoc-gen-lava@latest
+  - github.com/pubgo/protoc-gen-openapi@latest
+  - github.com/emicklei/proto-contrib/cmd/protofmt@latest
+  - github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@latest
+
